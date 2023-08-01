@@ -1,2 +1,5 @@
+code . (this is typed in terminal)
 git init
 git add .
+git commit -m 'initial commit'
+git push
