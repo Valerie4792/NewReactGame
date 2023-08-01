@@ -3,3 +3,6 @@ git init
 git add .
 git commit -m 'initial commit'
 git push
+npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+
+website similar to bootstrap is https://chakra-ui.com/
