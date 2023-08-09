@@ -1,2 +1,4 @@
 https://rawg.io/
 npm i axios
+
+remember for useEffect, there is a dependecy array
