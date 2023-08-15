@@ -8,7 +8,7 @@ import GameCardContainer from "./GameCardContainer";
 
 const GameGrid = () => {
   //below is being called from hooks that was created, so we are able to use it here in GameGrid
-  const { games, error, isLoading } = useGames();
+  const { data, error, isLoading } = useGames();
   const skeleton = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
   // need the array dependency to prevent infinite loop
@@ -26,7 +26,7 @@ const GameGrid = () => {
             <GameCardSkeleton key={skeleton} />
           </GameCardContainer>
           )}
-        {games.map((game) => (
+        {data.map((game) => (
           <GameCardContainer>
             <GameCard key={game.id} game={game}/>
           </GameCardContainer> 
