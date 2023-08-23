@@ -17,7 +17,7 @@ const useData = <T>(endpoint:string, requestConfig?: AxiosRequestConfig, deps?: 
     const controller = new AbortController();
 
     setIsLoading(true);
-
+// code is to pull from API generic
     apiClient
       .get<FetchResponse<T>>(endpoint, { signal: controller.signal,...requestConfig })
       .then((response) => {

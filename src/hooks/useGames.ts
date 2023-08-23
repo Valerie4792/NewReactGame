@@ -23,7 +23,7 @@ export interface Game {
 //   count: number;
 //   results: Game[];
 // }
-
+//end point specifi for games, parrams are the data pulled from the api
 const useGames = (gameQuery: GameQuery) =>
   useData<Game>(
     "./games",
@@ -31,6 +31,8 @@ const useGames = (gameQuery: GameQuery) =>
       params: {
         genres: gameQuery.genre?.id,
         parent_platforms: gameQuery.platform?.id,
+        ordering: gameQuery.sortOrder,
+        search: gameQuery.searchText
       },
     },
     [gameQuery]
